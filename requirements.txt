@@ -1,7 +1,8 @@
 flask
 flask-cors
-numpy==2.0.0
-matplotlib==3.9.1
-soundfile==0.12.1
-scipy==1.14.0
-pyyaml==6.0.2
+gunicorn
+numpy
+scipy
+soundfile
+pyyaml
+werkzeug==2.2.2
