@@ -4,7 +4,8 @@ __pycache__/
 temp/
 data_base/
 uploads/
-
+venv/
+start.sh
 project_structure.txt
 
 tree.pyvenv/
