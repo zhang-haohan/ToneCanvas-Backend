@@ -232,4 +232,6 @@ def upload_audio():
     }), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, host= '0.0.0.0', port=5000)
+    context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+    context.load_cert_chain(certfile='fullchain.pem', keyfile='privkey.pem')
+    app.run(debug=True,ssl_context=context, host= '0.0.0.0', port=5000)
