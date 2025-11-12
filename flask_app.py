@@ -11,7 +11,7 @@ from utils.file_parsing import parse_praat_pitch_file
 from utils.audio_utils import calculate_times, segment_nonzero_times_and_frequencies, interpolate_pitch_segments
 from utils.pitch_handling import handle_get_pitch_json, handle_get_pitch_audio
 from utils.trace_handling import handle_send_trace, handle_send_button_log
-
+os.chdir(os.path.dirname(__file__))
 app = Flask(__name__)
 
 # Enable CORS with specific configuration
