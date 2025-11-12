@@ -9,3 +9,5 @@ start.sh
 project_structure.txt
 
 tree.pyvenv/
+fullchain.pem
+privkey.pem
