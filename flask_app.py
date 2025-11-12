@@ -15,10 +15,7 @@ app = Flask(__name__)
 
 # Enable CORS with specific configuration
 CORS(app, resources={r"/api/*": {"origins": [
-    "http://localhost:3000",
-    "https://740d-88-173-177-226.ngrok-free.app",
-    "https://f650-2a01-e0e-1002-7bbe-e97-f8eb-b354-d8c6.ngrok-free.app",
-    "https://tone-canvasv2.vercel.app"
+    "https://tone-canvas-frontend.vercel.app"
 ]}})
 
 corpus_dir = os.path.join(os.path.dirname(__file__), 'corpus')
