@@ -7,7 +7,7 @@ uploads/
 venv/
 start.sh
 project_structure.txt
-
+user_log.txt
 tree.pyvenv/
 fullchain.pem
 privkey.pem
