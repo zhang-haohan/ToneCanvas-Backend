@@ -18,6 +18,8 @@ app = Flask(__name__)
 # Enable CORS with specific configuration
 # Enable CORS with specific configuration
 CORS(app, resources={r"/api/*": {"origins": [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
     "https://tone-canvas-frontend.vercel.app"
 ]}})
 
@@ -176,4 +178,6 @@ def upload_audio():
 if __name__ == '__main__':
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
     context.load_cert_chain(certfile='fullchain.pem', keyfile='privkey.pem')
+    import logging
+    logging.basicConfig(filename='flaskerror.log',level=logging.DEBUG)
     app.run(debug=True,ssl_context=context, host= '0.0.0.0', port=5000)
