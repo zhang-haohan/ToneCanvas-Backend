@@ -35,6 +35,7 @@ This project is a Flask-based backend for handling tone-related audio files, pro
    source .env/bin/activate   # For Linux/macOS
    .env\\Scripts\\activate    # For Windows
    pip install -r requirements.txt
+4. Need to intall apache2-dev
    ```
 
 ### Run Locally
