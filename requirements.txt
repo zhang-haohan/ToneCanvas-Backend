@@ -6,3 +6,4 @@ scipy
 soundfile
 pyyaml
 werkzeug==2.2.2
+mod_wsgi
