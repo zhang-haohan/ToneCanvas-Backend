@@ -25,7 +25,10 @@ def handle_get_pitch_json(files, current_index, temp_dir, corpus_dir):
         new_times, interpolated_frequencies = process_pitch_file(pitch_file, target_sample_rate)
         print(f"✅ Pitch 处理成功，数据点数: {len(new_times)}")
 
-        json_output_path = os.path.join(temp_dir, 'interpolated_pitch_data.json')
+        json_output_path = os.path.join(
+            temp_dir,
+            f"{os.path.splitext(wav_file)[0]}_interpolated_pitch_data.json",
+        )
         save_interpolated_data_to_json(new_times, interpolated_frequencies, json_output_path)
         print(f"📦 JSON 文件保存成功: {json_output_path}")
 
@@ -60,7 +63,10 @@ def handle_get_pitch_audio(files, current_index, temp_dir, corpus_dir):
         sine_wave = generate_sine_wave(interpolated_frequencies, target_sample_rate)
         print(f"🎼 正弦波生成完毕，总样本数: {len(sine_wave)}")
 
-        audio_output_path = os.path.join(temp_dir, 'pitch_only_audio_manually.wav')
+        audio_output_path = os.path.join(
+            temp_dir,
+            f"{os.path.splitext(wav_file)[0]}_pitch_only_audio.wav",
+        )
         sf.write(audio_output_path, sine_wave, target_sample_rate)
         print(f"📁 音频文件保存成功: {audio_output_path}")
 
